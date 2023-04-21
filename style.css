@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+.navbar-nav .nav-item.active a.nav-link {
+    background-color: black;
+    color: white;
+    border-radius: 30px;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .dropdown-toggle::after {
+    display: none;
+}
+
+.dropdown-toggle i {
+    margin-left: 5px;
+}
+
+.dropdown-menu {
+    min-width: 200px; /* Ajusta el ancho según tus necesidades */
+  }
+.dropdown-menu a.active,
+.dropdown-menu a:hover {
+  background-color: rgba(128, 128, 128, 0.212);
+  color: black;
+  width: auto;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+

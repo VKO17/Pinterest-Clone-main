@@ -1,18 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./Card/card.style.css">
     <link rel="stylesheet" href="./SearchBar/searchBar.style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./Card/card.style.css">
+    <title>Pinteres Clone</title>
 </head>
+
 <body>
 
-    <script src="script.js"></script>
-    <script src="./Card/card.script.js"></script>
-    <script src="./SearchBar/searchBar.script.js"></script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="30" height="30"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active" id="inicio">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item" id="hoy">
+                            <a class="nav-link" href="#">Hoy</a>
+                        </li>
+                    </ul>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Crear
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item active" href="#">Crear un Idea Pin</a></li>
+                            <li><a class="dropdown-item" href="#">Crear Idea Pin</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto search-form">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <span class="search-icon"><i class="fas fa-search"></i></span>
+                </form>
+                <ul class="navbar-nav ms-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="far fa-comment-dots"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><img src="profile.jpg" alt="profile" width="30" height="30"
+                                class="rounded-circle"></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu my-new-dropdown-menu dropdown-menu-end"
+                            aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item active" href="#">Perfil</a></li>
+                            <li><a class="dropdown-item" href="#">Agregar cuenta</a></li>
+                            <li><a class="dropdown-item" href="#">Convertir en cuenta para empresa </a></li>
+                            <li><a class="dropdown-item" href="#">Configuración </a></li>
+                            <li><a class="dropdown-item" href="#">Mejora tu feed de inicio </a></li>
+                            <li><a class="dropdown-item" href="#">Instalar la aplicación de Windows </a></li>
+                            <li><a class="dropdown-item" href="#">Tus derechos de privacidad </a></li>
+                            <li><a class="dropdown-item" href="#">Obtener ayuda </a></li>
+                            <li><a class="dropdown-item" href="#">Ver condiciones de servicio </a></li>
+                            <li><a class="dropdown-item" href="#">Ver política de privacidad </a></li>
+                            <li><a class="dropdown-item" href="#">Sé un evaluador beta </a></li>
+                            <li><a class="dropdown-item" href="#">Salir </a></li>
+                        </ul>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- --------------------nav End -------------------- -->
+
+    <div class="container">
+        <div class="card card_small">
+            <img src="https://i.pinimg.com/236x/98/dd/66/98dd66c3cfd18cf1bcd5fb57e28fb124.jpg" alt="">
+        </div>
+
+        <div class="card card_large">
+            <img src="https://i.pinimg.com/236x/4d/68/2b/4d682be48495001a75f3ceb5b92fa0c7.jpg" alt="">
+        </div>
+        <div class="card card_small">
+            <img src="https://i.pinimg.com/236x/ba/e1/cb/bae1cbddeffff7502f65987d0c97afe8.jpg" alt="">
+        </div>
+
+        <div class=" card_small">
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=777715429419857986" height="714" width="345"
+                frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="card card_midium">
+            <img src="https://i.pinimg.com/236x/d2/4b/f0/d24bf0205bbf2547bbcbc7d3ee8cd4b3.jpg" alt="">
+        </div>
+        <div class="card card_small">
+            <img src="https://i.pinimg.com/236x/59/9e/f3/599ef3a1d3193a5e6d82651fbce75d3a.jpg" alt="">
+        </div>
+        <div class="card card_midium">
+            <img src="https://i.pinimg.com/236x/e0/50/c0/e050c06c392782bc0d1061a8316a3ed7.jpg" alt="">
+        </div>
+        <div class="card card_large">
+            <img src="https://i.pinimg.com/236x/c5/97/de/c597deec483a3d3d04f3e20303173bc3.jpg" alt="">
+        </div>
+
+        <div class="card card_small">
+            <img src="https://i.pinimg.com/236x/e6/22/ce/e622ce555bcb0ac835a98027868934f3.jpg" alt="">
+        </div>
+        <div class="card card_midium">
+            <img src="https://i.pinimg.com/236x/06/8c/df/068cdf34cfc34b6ad1712bd5df0fba4a.jpg" alt="">
+        </div>
+
+        <div class="card card_small">
+            <img src="https://i.pinimg.com/236x/84/f3/76/84f3760d32d5891f2f702cbf0badb2a6.jpg" alt="">
+        </div>
+        <div class="card card_midium">
+            <img src="https://i.pinimg.com/236x/46/fb/f3/46fbf366b469e867e672aeaaeb58e344.jpg" alt="">
+        </div>
+        <div class="card card_small">
+            <img src="https://i.pinimg.com/236x/39/11/6c/39116c247669762f4ce72be4ce2b862e.jpg" alt="">
+        </div>
+        <div class="card card_midium">
+            <img src="https://i.pinimg.com/236x/d6/ef/6c/d6ef6c6d98237935b420b10c59088e29.jpg" alt="">
+        </div>
+        <div class="card card_large">
+            <img src="https://i.pinimg.com/236x/3a/f7/a8/3af7a84ae21f9dc9dd19e7308a2c2314.jpg" alt="">
+        </div>
+        <div class="card card_large">
+            <img src="https://i.pinimg.com/236x/c0/b5/73/c0b573d31fb85e2bc6c7d4adfdabf1da.jpg" alt="">
+        </div>
+
+     
+
+     
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
 </body>
+<script src="script.js"></script>
+<script src="./Card/card.script.js"></script>
+<script src="./SearchBar/searchBar.script.js"></script>
+
 </html>
