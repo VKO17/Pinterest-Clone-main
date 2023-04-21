@@ -16,14 +16,11 @@
 </head>
 
 <body>
+    <!-- -------------------- Inicio del Nav Bar ---------------------->
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light ">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="30" height="30"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <ul class="navbar-nav">
@@ -47,14 +44,95 @@
                     </li>
                 </ul>
                 <form class="d-flex ms-auto search-form d-block">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onclick="toggleSection()">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
+                        onclick="toggleSection()">
                     <span class="search-icon"><i class="fas fa-search"></i></span>
                     <div class="search-section">
-                      <div class="search-section__item"><img src="imagen1.jpg" alt=""></div>
-                      <div class="search-section__item"><img src="imagen2.jpg" alt=""></div>
-                      <div class="search-section__item"><img src="imagen3.jpg" alt=""></div>
+                        <div class="busquedas-recientes">
+
+                            <!-- Aquí va el contenido de "Busquedas recientes" -->
+
+                            <h6>Búsquedas recientes</h6>
+                            <div class="d-flex flex-wrap align-items-center justify-content-start">
+                                <div class="tag-container">
+                                    <div class="tag">
+                                        <span>Viajes&nbsp;</span>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                    <div class="tag">
+                                        <span>Ilustraciones&nbsp;</span>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                    <div class="tag">
+                                        <span>Arte Manga&nbsp;</span>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                                <div class="tag-container">
+                                    <div class="tag">
+                                        <span>Fondos de Pantalla&nbsp;</span>
+                                        <i class="fas fa-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ideas-para-ti">
+
+                            <!-- Aquí va el contenido de "Ideas para ti" -->
+
+                            <h6>Ideas para ti</h6>
+                            <div class="d-flex flex-wrap align-items-center justify-content-start">
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/e5/80/88/e5808830d67f395d4354a97741145515.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Viajes</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/f8/bf/df/f8bfdfa9a07b952d9f01d0e4651b3ef6.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Ilustraciones</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/17/1a/cd/171acddc24cd2db330c4abdee135271b.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Arte Manga</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/9e/21/21/9e2121f78c61ab08a416558cd8eedd76.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Fondos de Pantalla</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/d8/35/d6/d835d631dcd07ff58817d4cf0bf6aa6b.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Coches</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Agrega más elementos .idea si lo necesitas -->
+                            </div>
+                        </div>
+
+
+                        <div class="populares-en-pinterest">
+                            <!-- Aquí va el contenido de "Populares en Pinterest" -->
+                        </div>
                     </div>
-                  </form>               
+                </form>
+
                 <ul class="navbar-nav ms-3">
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
@@ -87,8 +165,6 @@
                             <li><a class="dropdown-item" href="#">Salir </a></li>
                         </ul>
                     </li>
-
-
                 </ul>
             </div>
         </div>
@@ -96,7 +172,7 @@
 
 
 
-    <!-- --------------------nav End -------------------- -->
+    <!-- --------------------Final del Nav Bar -------------------- -->
 
     <div class="container">
         <div class="card card_small">
@@ -153,9 +229,9 @@
             <img src="https://i.pinimg.com/236x/c0/b5/73/c0b573d31fb85e2bc6c7d4adfdabf1da.jpg" alt="">
         </div>
 
-     
 
-     
+
+
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"

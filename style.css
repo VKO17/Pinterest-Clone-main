@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+.navbar {
+  background-color: white;
+}
 .navbar-nav .nav-item.active a.nav-link {
     background-color: black;
     color: white;
