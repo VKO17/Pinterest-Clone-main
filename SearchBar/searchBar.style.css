@@ -1,37 +1,56 @@
 .search-form {
+    margin: 0 1rem;  
+    flex-grow: 1; /* <-- THE SECRET SAUCE! */
+    min-width: 407px;    max-width: 100%;
     position: relative;
-    width: 900px;
-}
+    max-height: 35px;
+  }
 
-.search-form input[type="search"] {
+  .search-section {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+    display: none;
+  }
+
+  .search-form:focus-within .search-section {
+    display: block; /* mostrar al hacer foco en la barra de búsqueda */
+  }
+  
+  .search-form input[type="search"] {
     padding-left: 50px;
     height: 40px;
     border-radius: 20px;
     background-color: rgba(128, 128, 128, 0.212);
     border: none;
     transition: all 0.3s ease;
-}
+  }
 
-.search-form input[type="search"]:focus {
+  .search-form input[type="search"]:focus {
     outline: none;
     background-color: rgba(128, 128, 128, 0.212);
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
     padding-left: 10px;
-}
+  }
 
-.search-icon {
+  .search-icon {
     position: absolute;
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
     transition: all 0.3s ease;
-}
+  }
 
-.search-icon i {
+  .search-icon i {
     color: #333;
-}
+  }
 
-.search-form input[type="search"]:focus + .search-icon {
+  .search-form input[type="search"]:focus + .search-icon {
     opacity: 0;
     transform: translateY(-50%) translateX(5px);
-}
+  }
