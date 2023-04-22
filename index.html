@@ -16,23 +16,31 @@
 </head>
 
 <body>
+
     <!-- -------------------- Inicio del Nav Bar ---------------------->
 
     <nav class="navbar navbar-expand-sm navbar-light ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="30" height="30"></a>
+
+            <!-- -------------------- Logo ---------------------->
+
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="logo" width="24" height="24"
+                    style="position: relative; margin-left: 5px; margin-top: 8px"></a>
+
+            <!-- -------------------- Menu ---------------------->
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <ul class="navbar-nav">
                         <li class="nav-item active" id="inicio">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link ebs" href="#">Inicio</a>
                         </li>
                         <li class="nav-item" id="hoy">
-                            <a class="nav-link" href="#">Hoy</a>
+                            <a class="nav-link ebs" href="#">Hoy</a>
                         </li>
                     </ul>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link ebs dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Crear
                             <i class="fas fa-chevron-down"></i>
@@ -43,9 +51,11 @@
                         </ul>
                     </li>
                 </ul>
+
+                <!-- -------------------- Inicio del Search-Bar ---------------------->
+
                 <form class="d-flex ms-auto search-form d-block">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"
-                        onclick="toggleSection()">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <span class="search-icon"><i class="fas fa-search"></i></span>
                     <div class="search-section">
                         <div class="busquedas-recientes">
@@ -93,13 +103,7 @@
                                         <h4>Viajes</h4>
                                     </div>
                                 </div>
-                                <div class="contenedor-imagen">
-                                    <img src="https://i.pinimg.com/564x/f8/bf/df/f8bfdfa9a07b952d9f01d0e4651b3ef6.jpg"
-                                        alt="Texto alternativo">
-                                    <div class="texto-superpuesto">
-                                        <h4>Ilustraciones</h4>
-                                    </div>
-                                </div>
+
                                 <div class="contenedor-imagen">
                                     <img src="https://i.pinimg.com/564x/17/1a/cd/171acddc24cd2db330c4abdee135271b.jpg"
                                         alt="Texto alternativo">
@@ -129,65 +133,151 @@
 
                         <div class="populares-en-pinterest">
                             <!-- Aquí va el contenido de "Populares en Pinterest" -->
+
+                            <h6>Populares en Pinterest</h6>
+                            <div class="d-flex flex-wrap align-items-center justify-content-start">
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/b3/e4/84/b3e484d2a8b85494bce8b19c4e503693.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Fotos para Compartir</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/564x/f8/bf/df/f8bfdfa9a07b952d9f01d0e4651b3ef6.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Ilustraciones</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/236x/17/8c/d0/178cd0b47c2774f56471209135d36112.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Dibujos Sencillos</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/236x/04/a9/ef/04a9ef27887b8c468a1ba4e45bdea488.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Fondos de Pantalla de Celular</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/236x/96/74/83/967483ef9d4804bea4e8551797c27a5d.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Wallpaper Aesthetic</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/236x/9f/7e/68/9f7e68d6be6fe3e9233bb06c52c31ecb.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Fotos de Perfil</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/236x/8b/df/94/8bdf94cddc471f7196ca11f1b8dc45a7.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Espacios Artisticos</h4>
+                                    </div>
+                                </div>
+                                <div class="contenedor-imagen">
+                                    <img src="https://i.pinimg.com/236x/b0/61/95/b061959b18e3a311f749b8d5e5647667.jpg"
+                                        alt="Texto alternativo">
+                                    <div class="texto-superpuesto">
+                                        <h4>Genshin Impact</h4>
+                                    </div>
+                                </div>
+
+                                <!-- Agrega más elementos .populares-en-pinterest si lo necesitas -->
+                            </div>
                         </div>
                     </div>
                 </form>
+                <!-- -------------------- Final del Search-Bar ---------------------->
 
                 <ul class="navbar-nav ms-3">
-                    <li class="nav-item">
+                    <li class="nav-item" id="bell">
                         <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"><i class="far fa-comment-dots"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#"><img src="profile.jpg" alt="profile" width="30" height="30"
-                                class="rounded-circle"></a>
+                    <li class="nav-item" id="profile-pic">
+                        <a class="nav-link" href="#"><img src="profile.jpg" alt="profile" width="24" height="24"
+                                class="rounded-circle" style="margin-top: 8px" /></a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        <a class="nav-link ebs dropdown-toggle" href="#" id="navbarDropdown2" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <i class="fas fa-chevron-down"></i>
                         </a>
-                        <ul class="dropdown-menu my-new-dropdown-menu dropdown-menu-end"
+
+                        <!-------- Empieza modificación de dropdown-menu del usuario --------->
+
+                        <ul class="dropdown-menu my-new-dropdown-menu dropdown-menu-end scroll"
                             aria-labelledby="navbarDropdown2">
-                            <li><a class="dropdown-item active" href="#">Perfil</a></li>
-                            <li><a class="dropdown-item" href="#">Agregar cuenta</a></li>
-                            <li><a class="dropdown-item" href="#">Convertir en cuenta para empresa </a></li>
-                            <li><a class="dropdown-item" href="#">Configuración </a></li>
-                            <li><a class="dropdown-item" href="#">Mejora tu feed de inicio </a></li>
-                            <li><a class="dropdown-item" href="#">Instalar la aplicación de Windows </a></li>
-                            <li><a class="dropdown-item" href="#">Tus derechos de privacidad </a></li>
-                            <li><a class="dropdown-item" href="#">Obtener ayuda </a></li>
-                            <li><a class="dropdown-item" href="#">Ver condiciones de servicio </a></li>
-                            <li><a class="dropdown-item" href="#">Ver política de privacidad </a></li>
-                            <li><a class="dropdown-item" href="#">Sé un evaluador beta </a></li>
-                            <li><a class="dropdown-item" href="#">Salir </a></li>
+                            <li><a class="dropdown-item disabled" href="#"
+                                    style="font-size: 12px; color: black;">Actualmente en</a></li>
+                            <div class="profile-group">
+                                <li class="profile-box"><a class="dropdown-item active" href="#">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/LetterU.svg/800px-LetterU.svg.png"
+                                            alt="User icon" width="30px" height="auto" class="user-icon">
+                                        <label class="profile-label"><b>Usuario 123</b><br><label
+                                                class="opacity-item">Personal</label><b><i
+                                                    class="fa-solid fa-check check-icon"></i></b><br><label
+                                                class="opacity-item">usuario123@gmail.com</label></a></label></li>
+                            </div>
+                            <li><a class="dropdown-item disabled disabled-item" href="#"
+                                    style="font-size: 12px; color: black;">Tus cuentas</a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Agregar cuenta</a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Convertir en cuenta para empresa</a></li>
+                            <li><a class="dropdown-item disabled disabled-item" href="#"
+                                    style="font-size: 12px; color: black;">Más opciones</a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Configuración</a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Mejora tu feed de inicio </a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Instalar la aplicación de Windows </a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Tus derechos de privacidad </a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Obtener ayuda<img src="arrow.webp"
+                                        class="arrow-icon"></a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Ver condiciones de servicio<img
+                                        src="arrow.webp" class="arrow-icon"></a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Ver política de privacidad<img
+                                        src="arrow.webp" class="arrow-icon"></a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Sé un evaluador beta<img src="arrow.webp"
+                                        class="arrow-icon"></a></li>
+                            <li><a class="dropdown-item menu-item" href="#">Salir </b></a></li>
                         </ul>
                     </li>
                 </ul>
+                <!-- ---------------Termina modificación------------ -->
             </div>
         </div>
     </nav>
 
+    <!---------------------- Final del Nav Bar --------------------->
 
-
-    <!-- --------------------Final del Nav Bar -------------------- -->
+    <!-- -------------------- Inicio del Contenedor de Imágenes ---------------------->
 
     <div class="container">
+
         <div class="card card_small">
-            <img src="https://i.pinimg.com/236x/98/dd/66/98dd66c3cfd18cf1bcd5fb57e28fb124.jpg" alt="">
+            <img src="https://i.pinimg.com/236x/88/63/bf/8863bfa684eddb753964faaae9e50249.jpg" alt="">
         </div>
 
         <div class="card card_large">
-            <img src="https://i.pinimg.com/236x/4d/68/2b/4d682be48495001a75f3ceb5b92fa0c7.jpg" alt="">
+            <img src="https://i.pinimg.com/564x/1b/d0/87/1bd087137fb84dd357a938edf9c2f92e.jpg" alt="">
         </div>
         <div class="card card_small">
             <img src="https://i.pinimg.com/236x/ba/e1/cb/bae1cbddeffff7502f65987d0c97afe8.jpg" alt="">
         </div>
 
         <div class=" card_small">
-            <iframe src="https://assets.pinterest.com/ext/embed.html?id=777715429419857986" height="714" width="345"
+            <iframe src="https://assets.pinterest.com/ext/embed.html?id=401172279320775390" height="714" width="345"
                 frameborder="0" scrolling="no"></iframe>
         </div>
         <div class="card card_midium">
@@ -229,15 +319,19 @@
             <img src="https://i.pinimg.com/236x/c0/b5/73/c0b573d31fb85e2bc6c7d4adfdabf1da.jpg" alt="">
         </div>
 
-
-
-
-
+        <!-- -------------------- Espacio para agregar imágenes ---------------------->
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
-        crossorigin="anonymous"></script>
+
+    <!-- -------------------- Final del Contenedor de Imágenes ---------------------->
+
+
 </body>
+<!-- -------------------- Scripts ---------------------->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/ef9a68ea96.js" crossorigin="anonymous"></script>
 <script src="script.js"></script>
 <script src="./Card/card.script.js"></script>
 <script src="./SearchBar/searchBar.script.js"></script>

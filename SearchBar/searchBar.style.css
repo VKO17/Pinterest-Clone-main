@@ -3,18 +3,18 @@
 .search-form {
     margin: 0 1rem;
     flex-grow: 1;
-    min-width: 407px;
-    max-width: 100%;
+    width: auto;
     position: relative;
-    max-height: 35px;
+    height: 48px;
+    margin-top: 8px;
 }
 
 .search-section {
     position: absolute;
-    top: calc(100% + 10px);
+    top: calc(100% + 5px);
     left: 0;
     width: 100%;
-    height: 500px;
+    height: auto;
     background-color: #fff;
     border-radius: 20px 20px 20px 20px;
     border: 1px solid #fff;
@@ -29,9 +29,9 @@
 }
 
 .search-form input[type="search"] {
-    padding-left: 50px;
-    height: 40px;
-    border-radius: 20px;
+    padding-left: 40px;
+    height: 48px;
+    border-radius: 24px;
     background-color: rgba(128, 128, 128, 0.212);
     border: none;
     transition: all 0.3s ease;
@@ -65,7 +65,8 @@
 
 /* Secciones del Searchbar */
 
-/*  Aquí va el contenido de "Busquedas recientes" */
+/*  CSS de "Busquedas recientes" */
+
 .busquedas-recientes {
     border-radius: 20px;
     padding: 20px;
@@ -78,7 +79,6 @@
     text-decoration: none;
     font-size: 16px;
     /* Puedes ajustar el tamaño del texto según sea necesario */
-
 }
 
 
@@ -112,7 +112,7 @@
     cursor: pointer;
 }
 
-/* Aquí va el contenido de "Ideas para ti" */
+/* CSS de "Ideas para ti" */
 
 .ideas-para-ti {
     border-radius: 20px;
@@ -125,9 +125,9 @@
     font-weight: normal;
     text-decoration: none;
     font-size: 16px;
-    /* Puedes ajustar el tamaño del texto según sea necesario */
-
 }
+
+/* CSS de las Imágenes de "Ideas para ti" y "Populares en Pinteres" */
 
 .contenedor-imagen {
     position: relative;
@@ -140,7 +140,7 @@
     /* para recortar las imágenes si son más grandes que el contenedor */
     border-radius: 20px 20px 20px 20px;
     /* redondear las esquinas superiores e inferiores */
-    margin-right: 10px;
+    margin-right: auto;
     /* espacio entre las imágenes */
     margin-top: 10px;
 }
@@ -181,3 +181,20 @@
 .contenedor-imagen:hover img {
     filter: brightness(0.7);
 }
+
+/* CSS de "Populares en Pinterest" */
+
+.populares-en-pinterest {
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+.populares-en-pinterest h6 {
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* ------------------------------------------------------------------------------------------------- */

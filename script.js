@@ -1,3 +1,22 @@
+/* Evento de color del Navbar */
+
+const inicio = document.getElementById("inicio");
+const hoy = document.getElementById("hoy");
+
+inicio.addEventListener("click", () => {
+    hoy.classList.remove("active");
+    inicio.classList.add("active");
+});
+
+hoy.addEventListener("click", () => {
+    inicio.classList.remove("active");
+    hoy.classList.add("active");
+});
+
+// --------------------------------------------------------------------------------------------------
+
+// JS del dropdown-menu 
+
 // Get all dropdown menu items
 const dropdownItems = document.querySelectorAll('.dropdown-item');
 
@@ -15,3 +34,4 @@ dropdownItems.forEach((item, index) => {
     item.classList.add('active');
   }
 });
+

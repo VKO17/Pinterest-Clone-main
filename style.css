@@ -1,16 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Blinker:wght@300;400;600;700&family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+/*CSS del Nav-bar */
+
 .navbar {
   background-color: white;
 }
+
+.nav-link.ebs {
+  font-weight: bold; 
+  color: black; 
+  margin-top: 10px;
+}
+
+
 .navbar-nav .nav-item.active a.nav-link {
     background-color: black;
     color: white;
     border-radius: 30px;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
+
   }
   
+  /*CSS del dropdown-menu #1*/
   .dropdown-toggle::after {
     display: none;
 }
@@ -22,15 +34,88 @@
 .dropdown-menu {
     min-width: 200px; /* Ajusta el ancho según tus necesidades */
   }
+
+/* Empieza modificacion de dropdown-menu #2 */
+
 .dropdown-menu a.active,
 .dropdown-menu a:hover {
   background-color: rgba(128, 128, 128, 0.212);
   color: black;
   width: auto;
   border-radius: 10px;
-  padding: 0.5rem 1rem;
-  margin-left: 5px;
-  margin-right: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+.user-icon{
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 10px;  
+  width: 20px;
+  height: auto;
+}
+.profile-group{
+  display: flex;
+  justify-content:space-around;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 2px;
+}
+.profile-label{
+  margin-top: 1px;
+  padding-left: 25px;
+  padding-right: 20px;
+  margin-bottom: 1px;
+  font-size: 14px;
+}
+.dropdown-item{
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  padding-bottom: 8px;
+}
+.menu-item{
+  font-weight: 550;
+  font-size: 16px;
+}
+.disabled-item{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.check-icon{
+  font-size: 20px;
+  padding-left: 120px;
+  float: right;
+  font-weight: 600;
+  position: relative;
+  top: -20px;  
+}
+.opacity-item{
+  opacity: 0.7;
+}
+.arrow-icon{
+  width: 20px;
+  height: auto;
+  float: right;
+  margin-top: 5px;
+}
 
+.scroll{
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: calc(100vh - 3.5rem)
+}
+
+/*  CSS de los iconos font-awesome */
+
+.fa-bell {
+  font-size: 24px;
+  margin-top: 8px;
+}
+
+#bell {
+  margin-left: -25px;
+}
+
+.fa-comment-dots {
+  font-size: 24px;
+  font-weight: 900;
+  margin-top: 8px;
+}
