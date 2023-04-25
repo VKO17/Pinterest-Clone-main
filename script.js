@@ -35,3 +35,11 @@ dropdownItems.forEach((item, index) => {
   }
 });
 
+//Empieza botón de ayuda estatico
+document.querySelector('#boton button').addEventListener('click', function() {
+  let options=document.querySelector('.opciones');
+  if(options.style.display=="none")
+  options.style.display = 'block';
+  else options.style.display="none"
+});
+//Termina botón de ayuda 
