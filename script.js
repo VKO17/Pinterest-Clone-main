@@ -42,4 +42,12 @@ document.querySelector('#boton button').addEventListener('click', function() {
   options.style.display = 'block';
   else options.style.display="none"
 });
+
+document.querySelector('body').addEventListener('click', function(event) {
+  let targetElement = event.target; 
+  let options=document.querySelector('.opciones');
+    if (!document.querySelector('#boton button').contains(targetElement)) {
+      options.style.display="none"
+  }
+})
 //Termina botón de ayuda 
