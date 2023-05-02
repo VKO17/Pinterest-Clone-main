@@ -1,3 +1,53 @@
+// Cambiar estructura de las imagenes
+const images = document.querySelectorAll('.grid-item');
+
+images.forEach((img) => {
+  const newDiv = document.createElement('div');
+  newDiv.classList.add('window');
+  newDiv.classList.add('grid-item');
+
+  const imgClone = img.cloneNode(true);
+  imgClone.classList.remove('grid-item');
+  newDiv.appendChild(imgClone); // Agregar la imagen clonada al contenedor window grid-item
+
+  const btnContainer = document.createElement('div');
+  btnContainer.classList.add('hover-zone');
+
+  const topBar = document.createElement('div');
+  topBar.classList.add('top-bar');
+  const buttonText = document.createElement('p');
+  buttonText.textContent = '';
+  topBar.appendChild(buttonText);
+  const anchorTag = document.createElement('a');
+  anchorTag.textContent = 'Guardar';
+  topBar.appendChild(anchorTag);
+  btnContainer.appendChild(topBar);
+
+  const bottomBar = document.createElement('div');
+  bottomBar.classList.add('bottom-bar');
+  const websiteAnchor = document.createElement('a');
+  websiteAnchor.textContent = '↗ Pinterest.com';
+  bottomBar.appendChild(websiteAnchor);
+  const radiusIco = document.createElement('div');
+  radiusIco.classList.add('radius-ico');
+  const icon1 = document.createElement('img');
+  icon1.src = 'https://cdn3.iconfinder.com/data/icons/iconset-1-1/24/icon_set_outlinder-10-256.png';
+  icon1.classList.add('radius-ico1');
+  const icon2 = document.createElement('img');
+  icon2.src = 'https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-more-256.png';
+  icon2.classList.add('radius-ico1');
+  radiusIco.appendChild(icon1);
+  radiusIco.appendChild(icon2);
+  bottomBar.appendChild(radiusIco);
+  btnContainer.appendChild(bottomBar);
+
+  newDiv.appendChild(btnContainer);
+
+  img.parentNode.replaceChild(newDiv, img);
+});
+
+
+
 const searchSection = document.querySelector(".search-section");
 const closeIcon = document.querySelector(".close-icon");
 const closeIconFaTimes = document.querySelector('.close-icon i.fa-times');
@@ -24,35 +74,14 @@ contViaje.addEventListener('click', function () {
 
   imgElements.forEach(function (imgElement) {
 
-    if (!imgElement.classList.contains('viajes-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('viajes-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
 
       imgElement.style.display = "none";
 
     }
 
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const viajesImgElements = document.querySelectorAll('viajes-img');
-  viajesImgElements.forEach(function (viajeImgElement) {
-    viajeImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // Do nothing to maintain original CSS styles
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -74,41 +103,13 @@ contArtMan.addEventListener('click', function () {
   imgElements.forEach(function (imgElement) {
 
     // If the image doesn't have the class arte-manga-img or img-searchbar
-    if (!imgElement.classList.contains('arte-manga-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('arte-manga-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       // Remove the image
       imgElement.style.display = "none";
     }
 
-  });
-
-  // Get the container element
-  const containerElement = document.querySelector('.grid-container');
-
-  // Remove the images that have been hidden
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  // Remove the Masonry object
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  // Loop through each viajes-img element and set the width to auto
-  const artManImgElements = document.querySelectorAll('.arte-manga-img');
-  artManImgElements.forEach(function (artManImgElement) {
-    artManImgElement.style.width = "auto";
-  });
-
-  // Loop through each img-searchbar element and set the width to 100%
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // Do nothing to maintain original CSS styles
-  });
-
-  // Initialize Masonry again
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   // Hide search section, modal, and show close icon
@@ -131,42 +132,15 @@ contFonPan.addEventListener('click', function () {
   imgElements.forEach(function (imgElement) {
 
     // If the image doesn't have the class arte-manga-img or img-searchbar
-    if (!imgElement.classList.contains('wallpaper-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('wallpaper-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       // Remove the image
       imgElement.style.display = "none";
     }
 
   });
 
-  // Get the container element
-  const containerElement = document.querySelector('.grid-container');
-
-  // Remove the images that have been hidden
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  // Remove the Masonry object
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  // Loop through each viajes-img element and set the width to auto
-  const fonPanImgElements = document.querySelectorAll('.wallpaper-img');
-  fonPanImgElements.forEach(function (fonPanImgElement) {
-    fonPanImgElement.style.width = "auto";
-  });
-
-  // Loop through each img-searchbar element and set the width to 100%
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // Do nothing to maintain original CSS styles
-  });
-
-  // Initialize Masonry again
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
-  });
 
   // Hide search section, modal, and show close icon
   searchSection.style.display = "none";
@@ -187,41 +161,13 @@ contCoches.addEventListener('click', function () {
   imgElements.forEach(function (imgElement) {
 
     // If the image doesn't have the class arte-manga-img or img-searchbar
-    if (!imgElement.classList.contains('coches-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('coches-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       // Remove the image
       imgElement.style.display = "none";
     }
 
-  });
-
-  // Get the container element
-  const containerElement = document.querySelector('.grid-container');
-
-  // Remove the images that have been hidden
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  // Remove the Masonry object
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  // Loop through each viajes-img element and set the width to auto
-  const cocheImgElements = document.querySelectorAll('.coches-img');
-  cocheImgElements.forEach(function (cocheImgElement) {
-    cocheImgElement.style.width = "auto";
-  });
-
-  // Loop through each img-searchbar element and set the width to 100%
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // Do nothing to maintain original CSS styles
-  });
-
-  // Initialize Masonry again
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   // Hide search section, modal, and show close icon
@@ -238,32 +184,11 @@ contFotos.addEventListener('click', function () {
 
   const imgElements = document.querySelectorAll('img');
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('foto-compartir-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('foto-compartir-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const ilustracionesImgElements = document.querySelectorAll('.foto-compartir-img');
-  ilustracionesImgElements.forEach(function (ilustracionesImgElement) {
-    ilustracionesImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -279,32 +204,11 @@ contFotos.addEventListener('click', function () {
 contIlustraciones.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('ilustraciones-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('ilustraciones-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const ilustracionesImgElements = document.querySelectorAll('.ilustraciones-img');
-  ilustracionesImgElements.forEach(function (ilustracionesImgElement) {
-    ilustracionesImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -321,32 +225,11 @@ contDibujos.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
 
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('dibujos-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('dibujos-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const dibujosImgElements = document.querySelectorAll('.dibujos-img');
-  dibujosImgElements.forEach(function (dibujosImgElement) {
-    dibujosImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -363,33 +246,13 @@ contCelular.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
 
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('wall-celular-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('wall-celular-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
   });
 
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const wallCelularImgElements = document.querySelectorAll('.wall-celular-img');
-  wallCelularImgElements.forEach(function (wallCelularImgElement) {
-    wallCelularImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
-  });
 
   searchSection.style.display = "none";
   modal.style.display = "none";
@@ -405,32 +268,10 @@ contAesthetic.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
 
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('wall-aesthetic-img') && !imgElement.classList.contains('img-searchbar')) {
-      imgElement.style.display = "none";
+    if (!imgElement.classList.contains('wall-aesthetic-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const wallAestheticImgElements = document.querySelectorAll('.wall-aesthetic-img');
-  wallAestheticImgElements.forEach(function (wallAestheticImgElement) {
-    wallAestheticImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -447,32 +288,11 @@ contFotosPerfil.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
 
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('foto-perfil-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('foto-perfil-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const fotoPerfilImgElements = document.querySelectorAll('.foto-perfil-img');
-  fotoPerfilImgElements.forEach(function (fotoPerfilImgElement) {
-    fotoPerfilImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -489,32 +309,11 @@ contEspaArt.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
 
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('espa-art-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('espa-art-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const espaArtImgElements = document.querySelectorAll('.espa-art-img');
-  espaArtImgElements.forEach(function (espaArtImgElement) {
-    espaArtImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";
@@ -531,32 +330,11 @@ contGames.addEventListener('click', function () {
   const imgElements = document.querySelectorAll('img');
 
   imgElements.forEach(function (imgElement) {
-    if (!imgElement.classList.contains('games-img') && !imgElement.classList.contains('img-searchbar')) {
+    if (!imgElement.classList.contains('games-img') && !imgElement.classList.contains('img-searchbar')
+      && !imgElement.classList.contains('radius-ico1') && !imgElement.classList.contains('img2')
+      && !imgElement.classList.contains('question-mark') && !imgElement.classList.contains('arrow-icon')) {
       imgElement.style.display = "none";
     }
-  });
-
-  const containerElement = document.querySelector('.grid-container');
-  const masonryElements = containerElement.querySelectorAll('.grid-item:not([style*="display: none"])');
-
-  let msnry = Masonry.data(containerElement);
-  msnry.destroy();
-
-  const gamesImgElements = document.querySelectorAll('.games-img');
-  gamesImgElements.forEach(function (gamesImgElement) {
-    gamesImgElement.style.width = "auto";
-  });
-
-  const searchbarImgElements = document.querySelectorAll('.img-searchbar');
-  searchbarImgElements.forEach(function (searchbarImgElement) {
-    // No hacer nada para mantener los estilos CSS originales
-  });
-
-  msnry = new Masonry(containerElement, {
-    itemSelector: ".grid-item",
-    columnWidth: 230,
-    gutter: 20,
-    isFitWidth: true
   });
 
   searchSection.style.display = "none";

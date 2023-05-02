@@ -166,7 +166,7 @@
 .contenedor-imagen {
     position: relative;
     display: inline-block;
-    width: 200px;
+    width: 190px;
     /* ancho predeterminado */
     max-height: 100px;
     /* altura máxima */
@@ -236,7 +236,7 @@
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
