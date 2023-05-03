@@ -266,42 +266,46 @@
                     <!------------------ BELL HTML END ----------------->
 
 
-                    <!------------------------------- MESSAGE AREA ESTART----------------- -->
-                    <div class="dropdown-center">
-                        <button class="btn btn-secondary dropdown-toggle circle2" type="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="far fa-comment-dots"></i>
-                        </button>
-                        <div class="buble">
-                            <ul class="dropdown-menu menuDrupdown ">
-                                <div class="Bheather">
-                                    <p class="heather1">Bandeja de Entrada </p>
-                                    <button class="dots Bbox"><i class="fa fa-ellipsis-h lapiz"
-                                            aria-hidden="true"></i></button>
-                                </div>
-
-                                <div class="heatherDos">
-                                    <button class="Bbox"><ion-icon class="pencilS" name="pencil"></ion-icon></button>
-                                    <p class="aside">Nuevo mensaje</p>
-                                </div>
-                                <h2 class="Ideas">Comparte ideas <br> con amigos</h2>
-
-
-                                <div class="Scontainer">
-                                    <div class="searchLast">
-                                        <input class="Scircle" type="text" placeholder="" name="search">
-                                    </div>
-                                    <div class="magnif">
-                                        <i class="fa fa-search lupa"></i>
-                                    </div>
-                                </div>
-
-
-                            </ul>
+                     <!------Empieza edicion de bandeja de mensajes----------->
+                <li class="nav-item dropdown-messages">
+                    <a class="nav-link ebs dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="far fa-comment-dots"></i>
+                    </a>
+                    <div class="dropdown-menu messages" id="msg">
+                        <div id="msg1">
+                            <div class="messages-bandeja">
+                                <p>Bandeja de entrada<i class="fas fa-ellipsis-h arrow-icon"></i>
+                                </p>
+                            </div>
+                            <div class="messages-nuevo">
+                              <a href="#"><img src="pencil.png" class="pencil-icon">Mensaje nuevo</a>
+                            </div>
+                            <div class="messages-ideas">
+                              <h1>Comparte ideas con amigos</h1>
+                            </div>
+                            <div class="messages-correo">
+                              <input type="text" placeholder="Buscar por nombre o correo" class="segundoinputcorreo">
+                            </div>
+                        </div>
+                        <div id="msg2">
+                            <div class="new-message">
+                                <p class="mensajeleft">Mensaje nuevo</p> <span id="cancelar" class="mensajeright">Cancelar</span>
+                            </div>
+                            <div class="messages-correo">
+                                <input type="text" placeholder="Buscar por nombre o correo" class="segundoinputcorreo">
+                            </div>
+                            <div>
+                                <img src="overflow.png" class="overflow">
+                            </div>
+                            <div class="newtext">
+                                <img src="pin.PNG" class="pin"><input type="text" placeholder="Enviar un mensaje" class="newinput"><i class="fas fa-heart corazon" style="color: #787a7d;"></i>
+                            </div>
                         </div>
                     </div>
+                        
 
-                    <!------------------------------- MESSAGE AREA END----------------- -->
+                <!--------Termina edicion de bandeja de mensajes...-------->
 
 
 

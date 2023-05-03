@@ -123,7 +123,7 @@
 
 .fa-bell {
   font-size: 24px;
-  margin-top: 8px;
+  padding-top: 5px;
 }
 
 #bell {
@@ -133,7 +133,8 @@
 .fa-comment-dots {
   font-size: 24px;
   font-weight: 900;
-  margin-top: 8px;
+  margin-top: 1px;
+  color: #5f5f5f;
 }
 
 .fa-times {
@@ -277,10 +278,7 @@
   font-size: 24px;
   margin-top: 8px;
   color: rgb(100, 99, 99);
-
 }
-
-
 
 #bell {
   margin-left: -25px;
@@ -364,130 +362,172 @@
 /**** BELL AREA END ********/
 
 
-/*******MESSAGE AREA START******/
-
-.fa-comment-dots {
-  font-size: 24px;
-  font-weight: 900;
-  margin-top: 8px;
-  color: #5f5f5f;
-
+/*Empieza boton de bandeja de mensajes*/
+.pencil-icon{
+  width: 60px;
+  height: auto;
+  padding-right: 10px;
+  
 }
-
-.circle2 {
-  border-radius: 50%;
-  border: none;
-  background: none;
-
+.dropdown-messages{
+  position: relative;
+  display: inline-block;
 }
-
-.circle2:hover {
-  background-color: rgba(188, 186, 186, 0.516);
-}
-
-.menuDrupdown {
-  width: 400px;
-  height: 500px;
-}
-
-.dropdown-menu {
+.messages{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translateX(-70%);
+  z-index: 30;
+  min-width: 160px;
+  width: 360px;
+  height: 570px;
+  margin-right: 20px;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  background-color: #ffffff;
+  background-clip: padding-box;
+  border: solid 2px rgb(243, 243, 243);
   border-radius: 20px;
+  box-shadow: #5c5a5a;
 }
-
-.menuDrupdown[data-bs-popper] {
-  left: -260%;
-  margin-top: 10px;
+.messages li{
+  list-style: none;
+  font-size: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
 }
-
-.heather1 {
-  margin-top: 10px;
-  margin-left: 90px;
-  font-weight: bolder;
+.messages li a{
+  text-decoration: none;
+  color: #111111;
 }
-
-.dots {
-  margin-left: 50px;
-  font-size: 20px;
+.messages-bandeja{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
 }
-
-.Bheather {
-  display: flex;
-  margin-bottom: 20px;
+.messages ul{
+  padding-left: 10px;
 }
-
-.heatherDos {
+.messages-nuevo{
+  font-weight: 600;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.messages-nuevo a{
+  text-decoration: none;
+  color: #111111;
+}
+.messages-nuevo:hover{
+  background-color: rgba(128, 128, 128, 0.212);
+  color: black;
+  width: auto;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.messages-ideas{
+  padding-left: 5px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.messages-correo input{
+  width: 320px;
+  float: center;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border: solid 2px #c4c1c1;
+  border-radius: 999px;
+  background-image: url('https://www.freeiconspng.com/thumbs/search-icon-png/search-icon-png-2.png');
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: left 12px center;
   display: flex;
   align-items: center;
+  font-size: 16px;
+  padding-left: 40px;
+
 }
-
-.heatherDos {
-  cursor: pointer;
+.fa-ellipsis-h{
+  margin-right: 20px;
+  font-size: 20px;
+  padding-top: 0%;
 }
-
-.heatherDos:hover {
-  background-color: #b3b3b335;
+/*estilos de menu secundario en JS*/
+.mensajeleft{
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  display: inline-block;
 }
-
-.pencilS {
-  margin-left: 10px;
-  margin-top: 10px;
-  background-size: 50px;
-  background-color: rgb(255, 0, 0);
-  width: 40px;
-  height: 40px;
-  color: #ffffff;
-  border-radius: 50%;
-}
-
-
-
-.aside {
+.mensajeright{
+  float: right;
   margin-top: 20px;
-  margin-left: 6px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  margin-right: 10px;
+  padding: 7px;
 }
-
-.Bbox {
-  background: none;
-  border: none
+.overflow{
+  float: right;
+  padding-right: 5px;
+  padding-top: 10px;
 }
-
-.Ideas {
-  margin-top: 20px;
-  margin-left: 10px;
+.newtext{
+  padding-top: 340px;
 }
-
-.Scircle {
-  width: 260px;
-  border: solid 2px gray;
+.newinput{
+  width: 230px;
+  float: center;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border: solid 2px #c4c1c1;
   border-radius: 999px;
-
+  margin-bottom: 60px;
+  padding-right: 20px;
+  text-align: left;
+  outline: none;
+  padding-left: 20px;
+}
+.corazon{
+  float: right;
+  padding-right: 20px;
+  font-size: 20px;
+  padding-top: 10px;
+}
+.newinput:focus{
+  border: solid 3px rgb(90, 175, 255) !important;
+}
+.segundoinputcorreo{
+  outline: none;
+}
+.segundoinputcorreo:focus{
+  border: solid 3px rgb(90, 175, 255) !important;
+  background-image: none;
+  padding-left: 20px;
+  transition: 0.2s;
 }
 
-.Scontainer {
-
+#msg1{
   width: 100%;
   height: 100%;
-  position: relative;
-
+  padding:1rem;
 }
-
-.searchLast {
+#msg2{
+  display:none;
   width: 100%;
   height: 100%;
-  position: absolute;
-  margin-top: -5px;
-  margin-left: 10px;
-  opacity: 0.7;
-
+  padding:1rem;
 }
 
-.magnif {
-  z-index: 9;
-  margin-left: 20px;
-  margin-top: 30px;
-  font-size: 15px;
+#cancelar:hover{
+  background-color: #999898;
+  border-radius: 20px;
+  padding: 0.5rem;
+  cursor:pointer;
 }
-
-
-/*******MESSAGE AREA END******/

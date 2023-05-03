@@ -51,3 +51,43 @@ document.querySelector('body').addEventListener('click', function(event) {
   }
 })
 //Termina botón de ayuda 
+
+//Boton de mensajes
+let msg=document.querySelector("#msg")
+let msg2=document.querySelector("#msg2")
+let cancelar=document.querySelector("#cancelar")
+let msg1=document.querySelector("#msg1")
+let nuevomsg=document.querySelector(".messages-nuevo")
+let msgcorreo=document.querySelector(".messages-correo")
+let msginner=document.querySelector(".far")
+
+msg.addEventListener("click",abrircerrar,true)
+msginner.addEventListener("click",abrircerrar,true)
+
+function abrircerrar(){
+  if(msg.style.display=="none")msg.style.display="block";
+  else msg.style.display="none";
+}
+
+cancelar.addEventListener("click",cerrar,true)
+function cerrar(){
+  msg2.style.display="none";
+  msg1.style.display="block";
+  msg.style.display="block";
+  msg.className=="dropdown-menu messages show"
+}
+nuevomsg.addEventListener("click",abrir1,true);
+msgcorreo.addEventListener("click",abrir,true)
+function abrir(){
+  msg2.style.display="block";
+  msg1.style.display="none";
+  msg.style.display="block"
+  msg.className=="dropdown-menu messages show"
+}
+function abrir1(){
+  msg2.style.display="block";
+  msg1.style.display="none";
+  msg.style.display="block"
+  msg.className=="dropdown-menu messages show"
+}
+
